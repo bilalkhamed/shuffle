@@ -5,10 +5,11 @@ import { ThemeProvider } from '@mui/material'
 import theme from './context/theme.ts'
 import './assets/css/index.css'
 import App from './App.tsx'
+const URL_BASE = '/shuffle';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Router>
+    <Router basename={URL_BASE}>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
